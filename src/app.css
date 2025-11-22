@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-white text-gray-900;
+		font-feature-settings: 'rlig' 1, 'calt' 1;
+	}
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	@apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-gray-400 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-gray-500;
+}
+
+/* Monaco Editor fixes */
+.monaco-editor {
+	padding-top: 10px;
+}
+
+/* Mermaid diagram styling */
+.mermaid-container {
+	@apply flex items-center justify-center w-full h-full overflow-auto;
+}
+
+.mermaid-container svg {
+	max-width: 100%;
+	height: auto;
+}
